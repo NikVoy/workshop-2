@@ -11,10 +11,6 @@ public class ShoppingCartImpl implements ShoppingCart {
     public static final String PRODUCT_DOES_NOT_EXIST = "Product %s does not exist!";
     public static final String PRODUCT_DOES_NOT_EXIST_IN_SHOPPING_CART = "Shopping cart does not contain product with name %s!";
 
-    public static final String CANNOT_ADD_PRODUCT_WHICH_IS_NULL = "Cannot add product which is null!";
-    public static final String CANNOT_CONTAINS_PRODUCT_WHICH_IS_NULL = "Cannot contains product which is null!";
-    public static final String CANNOT_REMOVE_PRODUCT_WHICH_IS_NULL = "Cannot remove product which is null!";
-
     private final List<Product> productList;
 
     public ShoppingCartImpl() {

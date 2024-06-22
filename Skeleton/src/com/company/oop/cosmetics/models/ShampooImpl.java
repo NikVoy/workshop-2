@@ -37,7 +37,7 @@ public class ShampooImpl extends ProductImpl implements Shampoo {
         return this.milliliters;
     }
 
-    public void setMilliliters(int milliliters) {
+    private void setMilliliters(int milliliters) {
         if (milliliters < 0) {
             throw new IllegalArgumentException(MILLILITERS_CANNOT_BE_NEGATIVE);
         }
