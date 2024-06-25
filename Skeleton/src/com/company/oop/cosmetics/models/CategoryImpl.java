@@ -18,13 +18,17 @@ public class CategoryImpl implements Category {
     private final List<Product> products;
 
     public CategoryImpl(String name) {
-        ValidationHelpers.validateStringLength(name, CATEGORY_NAME_MIN_LENGTH, CATEGORY_NAME_MAX_LENGTH, CATEGORY_NAME);
-        this.name = name;
+        setName(name);
         this.products = new ArrayList<>();
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        ValidationHelpers.validateStringLength(name, CATEGORY_NAME_MIN_LENGTH, CATEGORY_NAME_MAX_LENGTH, CATEGORY_NAME);
+        this.name = name;
     }
 
     public List<Product> getProducts() {
@@ -50,8 +54,6 @@ public class CategoryImpl implements Category {
         StringBuilder result = new StringBuilder();
         result.append(String.format("#Category: %s", this.name))
                 .append(System.lineSeparator());
-
-        List<Product> products = getProducts();
 
         if (products.isEmpty()) {
             result.append(" #No product in this category");
